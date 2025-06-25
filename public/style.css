@@ -1,0 +1,300 @@
+/* ====================== */
+/* ESTILOS GENERALES */
+/* ====================== */
+body {
+  background-color: #121212;
+  color: #f5f5f5;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  padding: 30px;
+  margin: 0;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+header img {
+  max-width: 180px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  color: #bb86fc;
+  font-size: 1.8rem;
+}
+
+h2, h3 {
+  margin: 10px 0;
+  color: #f5f5f5;
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* ====================== */
+/* ETAPAS */
+/* ====================== */
+.step {
+  display: block;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ====================== */
+/* PASO 1 */
+/* ====================== */
+.card {
+  background-color: #1c1c1c;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  max-width: 500px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.card h2 {
+  font-size: 28px;
+  color: #c084fc;
+}
+
+.card p {
+  font-size: 16px;
+  color: #ccc;
+  margin: 10px 0;
+}
+
+.file-btn {
+  display: inline-block;
+  background-color: #a855f7;
+  color: white;
+  padding: 15px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.file-btn:hover {
+  background-color: #9333ea;
+}
+
+.drop-info {
+  font-size: 14px;
+  color: #888;
+  margin-top: 10px;
+}
+#step1.dragover .card {
+  border: 2px dashed #c084fc;
+  background-color: #1a1a1a;
+}
+
+/* ====================== */
+/* PASO 2 - OPCIONES Y PREVIEW */
+/* ====================== */
+.card-wide {
+  display: flex;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #1c1c1c;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  flex-wrap: wrap;
+}
+
+.preview-column {
+  flex: 1;
+  text-align: center;
+}
+
+.preview-pages {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.preview-pages canvas {
+  max-width: 120px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+}
+
+.options-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.options-column h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.quality-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.quality-option {
+  display: flex;
+  align-items: center;
+  background-color: #2a2a2a;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.quality-option:hover {
+  background-color: #3b3b3b;
+}
+
+.quality-option input {
+  margin-right: 10px;
+  accent-color: #c084fc;
+}
+
+/* Botón de conversión */
+.convert-btn {
+  background-color: #9333ea;
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.convert-btn:hover {
+  background-color: #7e22ce;
+}
+
+/* ====================== */
+/* PASO 3 - PROGRESO */
+/* ====================== */
+.progress-card {
+  background-color: #1c1c1c;
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 500px;
+  margin: 60px auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.progress-text {
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  border: 6px solid #2e2e2e;
+  border-top: 6px solid #c084fc;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ====================== */
+/* PASO 4 - DESCARGA */
+/* ====================== */
+.download-card {
+  background-color: #1e1e1e;
+  padding: 30px;
+  max-width: 500px;
+  margin: 60px auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  animation: fadeIn 0.4s ease-in-out;
+  text-align: center;
+}
+
+.download-card h2 {
+  color: #03dac6;
+  margin-bottom: 10px;
+}
+
+.download-card p {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.icon-check {
+  font-size: 2.5rem;
+  color: #03dac6;
+  margin-bottom: 10px;
+}
+
+.buttons-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  background-color: #bb86fc;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+  background-color: #9c5df7;
+}
+
+.action-btn.secondary {
+  background-color: #2a2a2a;
+  color: #bbb;
+}
+
+.action-btn.secondary:hover {
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+.success {
+  color: #03dac6;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* ====================== */
+/* ANIMACIONES */
+/* ====================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Convertidor PDF a JPG</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo" />
+    <h1>Convertidor PDF a JPG</h1>
+  </header>
+
+  <main>
+    <!-- Paso 1: Selección del PDF -->
+    <section id="step1" class="step">
+      <div class="card">
+        <h2>PDF a JPG</h2>
+        <p>Convierte cada página de tu archivo PDF en una imagen JPG.</p>
+        <label for="pdfFile" class="file-btn">📁 Selecciona tu archivo PDF</label>
+        <input type="file" id="pdfFile" accept="application/pdf" hidden />
+        <p class="drop-info">o arrastra y suelta tu PDF aquí</p>
+      </div>
+    </section>
+
+    <!-- Paso 2: Previsualización y opciones -->
+    <section id="step2" class="step hidden">
+      <div class="card-wide">
+        <div class="preview-column">
+          <h2>Previsualización</h2>
+          <p id="previewLoader" class="preview-loader hidden">🔄 Generando previsualización...</p>
+          <div id="previewPages" class="preview-pages"></div>
+        </div>
+        <div class="options-column">
+          <h3>Selecciona la calidad de imagen</h3>
+          <div class="quality-buttons">
+            <label class="quality-option">
+              <input type="radio" name="quality" value="low" />
+              <span>Baja</span>
+            </label>
+            <label class="quality-option">
+              <input type="radio" name="quality" value="medium" />
+              <span>Media</span>
+            </label>
+            <label class="quality-option">
+              <input type="radio" name="quality" value="high" />
+              <span>Alta</span>
+            </label>
+          </div>
+          <button id="convertBtn" class="convert-btn">⚙️ Convertir a JPG</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paso 3: Progreso -->
+    <section id="step3" class="step hidden">
+      <div class="progress-card">
+        <div class="spinner"></div>
+        <p class="progress-text">Convirtiendo PDF a JPG... Por favor espera ⏳</p>
+      </div>
+    </section>
+
+    <!-- Paso 4: Descarga -->
+    <section id="step4" class="step hidden">
+      <div class="download-card">
+        <div class="icon-check">✅</div>
+        <h2>¡Conversión completa!</h2>
+        <p>Tu archivo está listo para descargar.</p>
+        <div class="buttons-row">
+          <button id="downloadBtn" class="action-btn">⬇️ DESCARGAR</button>
+          <button id="restartBtn" class="action-btn secondary">🔁 CONVERTIR OTRO PDF</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Hecho con ❤️ por tu convertidor confiable
+  </footer>
+
+  <!-- Librería PDF.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <!-- Script personalizado -->
+  <script src="script.js"></script>
+</body>
+</html>
